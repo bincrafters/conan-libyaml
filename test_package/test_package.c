@@ -16,7 +16,7 @@ struct fruit data[] = {
     {NULL, NULL, 0}
 };
 
-int main(int argc, char *argv[])
+int main(void)
 {
     yaml_emitter_t emitter;
     yaml_event_t event;

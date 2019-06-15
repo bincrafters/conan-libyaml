@@ -59,3 +59,5 @@ class LibYAMLConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = tools.collect_libs(self)
+        if self.settings.compiler == "Visual Studio":
+            self.cpp_info.defines = ["YAML_DECLARE_EXPORT"] if self.options.shared else ["YAML_DECLARE_STATIC"]
