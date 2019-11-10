@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from conans import ConanFile, CMake, tools
 import os
 
@@ -11,7 +9,6 @@ class LibYAMLConan(ConanFile):
     topics = ("conan", "libyaml", "yaml", "parser", "emitter")
     url = "https://github.com/bincrafters/conan-libyaml"
     homepage = "https://github.com/yaml/libyaml"
-    author = "Bincrafters <bincrafters@gmail.com>"
     license = "MIT"
     exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt"]
@@ -34,6 +31,7 @@ class LibYAMLConan(ConanFile):
 
     def configure(self):
         del self.settings.compiler.libcxx
+        del self.settings.compiler.cppstd
 
     def source(self):
         sha256 = "46bca77dc8be954686cff21888d6ce10ca4016b360ae1f56962e6882a17aa1fe"
