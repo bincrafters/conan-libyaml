@@ -10,7 +10,6 @@ class LibYAMLConan(ConanFile):
     url = "https://github.com/bincrafters/conan-libyaml"
     homepage = "https://github.com/yaml/libyaml"
     license = "MIT"
-    exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt"]
     generators = "cmake"
     settings = "os", "arch", "compiler", "build_type"
